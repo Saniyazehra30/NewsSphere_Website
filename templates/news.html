@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block childpage %}
+
+<!--                       START HEADING-->
+<div class="row heading text-center py-4 sticky-top" style="top:2.5rem; background:white;">
+    <div class="col-sm-6 mx-auto">
+       <p class="fs-3 m-0">
+          <i class="fa-regular fa-newspaper maroon-text"></i>
+           Our <b class="maroon-text">News </b>
+        </p>
+    </div>
+
+</div>
+<!--                       END  HEADING-->
+
+<div class="row mb-4">
+    <div class="col-sm-10 mx-auto">
+        {% for c in citydata%}
+        <a href="/news?ctid={{c.id}}" class="btn btn-sm maroon-bg con-btn me-3">{{c.city_name}}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row " >
+    <div class="col-sm-10 mx-auto">
+        <div class="row" >
+
+          <div class="col-sm-3 mt-1" >
+              <ul class="list-group" style="position:sticky; top:10rem;">
+                       <li class="list-group-item text-light maroon-bg">Categories</li>
+                  {% for i in catdata %}
+                     <a href="/news?cid={{i.id}}" style="text-decoration:none;"> <li class="list-group-item">{{i.category_name}}</li></a>
+                  {% endfor %}
+                  <a href="/news/" class="btn btn-sm maroon-bg text-light m-3">ALL NEWS</a>
+              </ul>
+
+          </div>
+
+
+          <div class="col-sm-9 mx-auto" >
+ <!-- START CARD -->
+                {% for x in ndata %}
+            <div class="card mb-3 border-0 shadow p-2 mb-2 bg-body-tertiary rounded" >
+  <div class="row g-0">
+    <div class="col-md-4" >
+      <img src="../{{x.news_pic}}" style="max-height:120px" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{x.headline}}</h5>
+        <p class="card-text">
+            <b>{{x.news_city}}</b> || <b>{{x.news_category}}</b>
+            <small class="text-body-secondary float-end" >Posted Date : {{x.posted_date}} </small>
+            <br>
+             <a href="/newsdetail?nid={{x.id}}" class="badge btn btn-sm maroon-bg con-btn rounded-pill" style="text-decoration:none;" >
+                  <i class="fa-solid fa-eye"></i>
+                 View More
+             </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+                {% endfor %}
+<!--                END CARD   -->
+          </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock%}

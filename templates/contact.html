@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block childpage %}
+
+<style>
+    .form-control{
+     height:50px;
+    }
+</style>
+
+
+<!--                       START HEADING-->
+<div class="row heading text-center py-4">
+    <div class="col-sm-6 mx-auto">
+       <p class="fs-3">
+           <i class="fa-solid fa-phone maroon-text "></i>
+           Contact <b class="maroon-text">Us </b>
+        </p>
+        <i style="line-height:-1">For any Query and Help, Please contact Us</i>
+    </div>
+
+</div>
+<!--                       END  HEADING-->
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+
+<!--               START   FORM-->
+            <div class="col-sm-7">
+
+                <form method="post">
+                    {% csrf_token %}
+                    Name<br><input type="text" placeholder="Enter Your Name" required
+                                   class="form-control shadow-lg mb-2  bg-body-tertiary rounded-0" name="name">
+                     Email<br><input type="email" placeholder="Enter Your Email" required
+                                   class="form-control shadow-lg mb-2  bg-body-tertiary rounded-0" name="email">
+                     Mobile<br><input type="text" placeholder="Enter Your Phone Number" required
+                                   class="form-control shadow-lg mb-2  bg-body-tertiary rounded-0" name="mobile">
+                    Message<br>
+                    <textarea  class="form-control shadow-lg mb-2  bg-body-tertiary rounded-0" style="height:90px;" placeholder="Enter Your Message" name="msg"></textarea>
+                    <br>
+                    <input type="submit" value="Save" class="form-control shadow-lg mb-4 maroon-bg text-light rounded-0 w-25">
+                </form>
+            </div>
+<!--              END    FORM-->
+            <div class="col-sm-5 text-center">
+                    <!--                       START HEADING-->
+                  <div class="row heading text-center ">
+                     <div class="col-sm-8 w-75 mx-auto ">
+                        <p class="fs-3">
+                             Contact <b class="maroon-text">Info </b>
+                        </p>
+                     </div>
+                  </div>
+<!--                       END  HEADING-->
+                <div class="col-sm-8 w-75 mx-auto text-start">
+                    <h4 class="maroon-text "> <i class="fa-solid fa-map-location-dot pe-2"></i> Office Address</h4>
+                         <p class="">
+                            Plot No-43, Behind H.P Petrol Pump,<br>
+                            Tedhi Pulia Ring Rd, Sector 5,<br>
+                            Vikas Nagar, Lucknow <br>
+                            Uttar Pradesh 226022
+                        </p>
+                </div>
+
+                 <div class="col-sm-8 w-75 mx-auto text-start">
+                    <h4 class="maroon-text "> <i class="fa-solid fa-phone pe-2"></i> Call Us</h4>
+                         <p class="">
+                             +91 8738440286 , <br>
+                           +91 9758210384
+                        </p>
+                </div>
+
+                 <div class="col-sm-8 w-75 mx-auto text-start">
+                    <h4 class="maroon-text "> <i class="fa-solid fa-envelope pe-2"></i> Mail Us</h4>
+                         <p class="">
+                            sanumanu@gmail.com
+                        </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--                       START HEADING-->
+     <div class="row heading text-center py-4">
+    <div class="col-sm-6 mx-auto">
+       <p class="fs-3">
+           Find Us On <b class="maroon-text">Google  <i class="fa-solid fa-location-dot maroon-text "></i> </b>
+        </p>
+        <i style="line-height:-1">Please Visit Us</i>
+    </div>
+
+</div>
+<!--                       END  HEADING-->
+
+    <div class="row mb-5">
+        <div class="col-sm-10 mx-auto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.161301648797!2d80.96384467522381!3d26.89837547665573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995785d5f7f1a5%3A0xffa47f1efe103f0d!2sTechpile%20Technology%20Pvt.%20Ltd.%20%7C%7C%20Internet%20website%20developers!5e0!3m2!1sen!2sin!4v1728817308288!5m2!1sen!2sin" class="w-100" style="border:0;min-height:450px;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock%}
