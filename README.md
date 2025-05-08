@@ -25,11 +25,10 @@
 - Python
 - Django Framework
 - Django REST Framework (DRF)
-- SQLite (development) / PostgreSQL (production-ready)
+- SQLite (development)
 
 ### Deployment
-- Apache / Nginx + Gunicorn
-- Cloud Hosting (Heroku, AWS)
+- PythonAnywhere (soon to be deployed)
 - Version Control: Git + GitHub
 
 ## 📌 Project Modules
@@ -65,7 +64,7 @@ Under guidance of **Mr. Rahul Soni**, Techpile Technology Pvt. Ltd.
 
 ---
 
-## 📷 Screenshots (optional)
+## 📷 Screenshots
 
-> You may add screenshots or a demo video link here once the project is deployed.
+> Adding screenshots
 
